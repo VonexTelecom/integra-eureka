@@ -10,9 +10,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.integra</groupId>
-	<artifactId>api.eureka</artifactId>
+	<artifactId>integra-eureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>api.eureka</name>
+	<name>integra-eureka</name>
 	<description>Eureka</description>
 
 	<properties>
