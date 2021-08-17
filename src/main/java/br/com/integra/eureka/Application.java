@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @EnableEurekaServer
-@EnableDiscoveryClient
 @SpringBootApplication
 public class Application {
 
@@ -25,13 +24,13 @@ public class Application {
 }
 
 
-@RestController
-class ServiceInstanceRestController {
-    @Autowired
-    private DiscoveryClient discoveryClient;
-
-    @RequestMapping("/service-instances/{applicationName}")
-    public List<ServiceInstance> serviceInstancesByApplicationName (@PathVariable final String applicationName) {
-        return this.discoveryClient.getInstances(applicationName);
-    }
-}
+//@RestController
+//class ServiceInstanceRestController {
+//    @Autowired
+//    private DiscoveryClient discoveryClient;
+//
+//    @RequestMapping("/service-instances/{applicationName}")
+//    public List<ServiceInstance> serviceInstancesByApplicationName (@PathVariable final String applicationName) {
+//        return this.discoveryClient.getInstances(applicationName);
+//    }
+//}
