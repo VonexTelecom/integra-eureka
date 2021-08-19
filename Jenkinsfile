@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh ' docker stop integra-eureka' 
                 sh ' docker rm integra-eureka'                
-                sh ' docker container run -d --name integra-eureka -p -h=`eurekaserver` 8761:8761 vonex/api_eureka:${BUILD_NUMBER}'
+                sh ' docker container run -d --name integra-eureka -h=`eurekaserver` -p  8761:8761 vonex/api_eureka:${BUILD_NUMBER}'
             }
         }        
     }
