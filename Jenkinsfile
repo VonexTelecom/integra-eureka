@@ -23,7 +23,7 @@ pipeline {
         stage ('Run docker') {
             steps {
                 sh ' docker stop integra-eureka || true' 
-                sh ' docker rm integra-eureka'                
+                sh ' docker rm integra-eureka || true'                
                 sh ' docker container run -d --name integra-eureka --hostname eurekaserver -p  8761:8761 vonex/api_eureka:${BUILD_NUMBER}'
             }
         }        
