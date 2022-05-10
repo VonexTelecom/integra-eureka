@@ -10,4 +10,4 @@ ARG JAR_FILE=target/*.jar
 
 ADD ${JAR_FILE} api-eureka.jar
 
-ENTRYPOINT ["java","-Xmx256M","-jar","/api-eureka.jar"]
+ENTRYPOINT ["java","-Xmx512m","-jar","/api-eureka.jar"]
